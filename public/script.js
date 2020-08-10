@@ -13,7 +13,7 @@ var peer = new Peer(undefined,{
 let myVideoStream;
 navigator.mediaDevices.getUserMedia({
     video:true,
-    audio:true
+    audio:false   //make it true
 }).then(stream =>{
     myVideoStream=stream;
     addVideostream(myVideo,stream);
@@ -54,4 +54,3 @@ const addVideostream=(video,stream)=>{
     })
     videoGrid.append(video);
 }
-// https://youtu.be/ZVznzY7EjuY?t=6462
