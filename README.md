@@ -1,15 +1,15 @@
 # ZOOM-CLONE
 ## This is a simple video calling application having the minimal requirements of making a video call by just sharing the links to the specific person
 ## Actual application
-![]("scr_shots/Capture.PNG")
+![](scr_shots/Capture.PNG)
 ### Key features 
 * Creating rooms 
 * Muting the audio
 * Muting the video
-* Chat feature
-    ![]("scr_shots/chat_side.PNG")
+* Chat feature <br>
+    ![](scr_shots/chat_side.PNG) 
 * Control pannel
-    ![]("scr_shots/control_block.PNG")
+    ![](scr_shots/control_block.PNG)
 
 #### Some of the suggested features are:
 * Verification using the google OAuth2.0 
