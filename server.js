@@ -1,8 +1,8 @@
 const express=require('express');
 const app=express();
 const server=require('http') .Server(app);
-const io=require("socket.io")(server)
-const { v4:uuidv4}=require('uuid');
+const io=require("socket.io")(server)  // for making rooms 
+const { v4:uuidv4}=require('uuid'); //for creating the the random room id
 const {ExpressPeerServer}=require('peer');
 const peerServer=ExpressPeerServer(server,{
     debug:true
@@ -24,6 +24,9 @@ io.on('connection',socket=>{
     socket.on('join-room',(roomId,userId)=>{   //this one listnes for the client and if any one joins the room a message is printerd in the console using the the socket.emit('join-room') on the client side
         socket.join(roomId);
         socket.to(roomId).broadcast.emit("user-connected",userId)
+        socket.on('message',(message)=>{
+            io.to(roomId).emit('createMessage',message)
+        })
     })
 })
 
@@ -31,6 +34,6 @@ io.on('connection',socket=>{
 
 
 
-server.listen(80,()=>{
+server.listen(process.env.PORT || 80,()=>{
     console.log('the server started listning on the port 80')
 });

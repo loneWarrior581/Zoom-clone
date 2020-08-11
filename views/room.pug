@@ -22,11 +22,11 @@ html(lang="en")
                     div(id="video-grid")
                 div(class="main__controls")
                     div(class="main__controls__block")
-                        div(class="main__controls__button")
-                            <i class="fas fa-microphone"></i>
+                        div(class="main__controls__button main__mute__button" onclick="muteUnmute()")
+                            <i class="mute fas fa-microphone"></i>
                             span Mute
-                        div(class="main__controls__button")
-                            <i class="fas fa-video"></i>
+                        div(class="main__controls__button main__video__button" onclick="playStop()")
+                            <i class=" stop fas fa-video"></i>
                             span Stop Video
                     div(class="main__controls__block")
                         div(class="main__controls__button")
@@ -46,7 +46,7 @@ html(lang="en")
                 div(class="main__header")
                     h6 Chat
                 div(class="main__chat__window")
-                    ul(class="message")
+                    ul(class="messages")
                 div(class="main__message__container")
                     input(id="chat_message" type="text" placeholder="Type your text here......")
                     <i class="fas fa-paper-plane"></i>

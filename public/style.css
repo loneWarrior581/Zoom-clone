@@ -12,6 +12,14 @@ video{
     height: 250px;
     width:350px ;
     object-fit: cover;
+    border: 1px solid rgb(148, 148, 44);
+    margin: 4px;
+   
+}
+video i*{
+    /* color: white; */
+    background-color: white;
+    z-index: 2;
 }
 .main{
     height: 100vh;
@@ -33,9 +41,7 @@ video{
     align-items: center;
     justify-content: center;
 }
-video{
-    padding: 10px ;
-}
+
 .main__controls{
     display: flex;
    background-color: #1C1E20;
@@ -79,9 +85,11 @@ video{
 .main__header{
     color: #F5F5F5;
     text-align: center;
+    padding-top: 4px;
 }
 .main__chat__window{
     flex-grow: 1;    /*this is for the making the window occupy all the space of the sereen */
+    overflow-y: scroll;
 }
 .main__message__container{
     padding:17px 12px ;
@@ -92,4 +100,28 @@ video{
     background-color: transparent;
     border: none;
     color:#F5F5F5 ;
+}
+.fas{
+    color: white;
+    padding-top: 3px;
+    /* padding-right: 4px ; */
+    margin-left:4px ;
+}
+.messages{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    list-style: none;
+}
+.unmute{
+    color: red;
+}
+.mute{
+    color: green;
+}
+.stop{
+    color: green
+}
+.play{  
+    color: red
 }
