@@ -18,8 +18,7 @@ video{
 .video__element{
     height: 281px;
     width: 357px;
-    overflow-wrap: break-word;
-    border: 3px solid rgb(148, 148, 44);
+    border: 3px solid rgb(148, 148, 12);
 
 
 }

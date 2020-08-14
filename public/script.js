@@ -158,7 +158,6 @@ const setStopVideo=()=>{
     <i class="stop fas fa-video"></i>
     <span>Stop Video</span>
     `
-    
     document.querySelector(".main__video__button").innerHTML=html;
 }
 const setPlayVideo=()=>{
@@ -166,7 +165,5 @@ const setPlayVideo=()=>{
     <i class="play fas fa-video-slash"></i>
     <span>Play Video</span>
     `
-    // div.appendChild(avDiv);
-    
     document.querySelector(".main__video__button").innerHTML=html;
 }
