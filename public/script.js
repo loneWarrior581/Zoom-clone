@@ -4,6 +4,9 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid');
 const myVideo = document.createElement('video');
+const div =document.createElement('div');
+div.classList.add("video__element");
+console.log(div)
 myVideo.muted = true;
 
 var peer = new Peer(undefined, {
@@ -68,10 +71,11 @@ const connectToNewUser = (useId, stream) => {//this is the others user joined ou
 
 const addVideostream = (video, stream) => {
     video.srcObject = stream;
+    div.appendChild(video);
     video.addEventListener('loadedmetadata', () => {
         video.play();
     })
-    videoGrid.append(video);
+    videoGrid.append(div);
 }
 
 
@@ -127,16 +131,25 @@ const setUnmuteButton=()=>{
 }
 
 
+
 //for the video
 const playStop=()=>{
     const enabled=myVideoStream.getVideoTracks()[0].enabled;
+    var avDiv=document.createElement('div');
+    avDiv.id="avtar";
+    avDiv.innerHTML=`<i class="fas fa-user-circle"> User  </i><span>Online<span>`;
+    
     if(enabled){
         myVideoStream.getVideoTracks()[0].enabled=false;
         setPlayVideo();
+        div.appendChild(avDiv);
     }
+    
     else{
         setStopVideo();
         myVideoStream.getVideoTracks()[0].enabled=true;
+        element=document.getElementById("avtar");
+        element.parentNode.removeChild(element);
     }
 }
 
@@ -145,6 +158,7 @@ const setStopVideo=()=>{
     <i class="stop fas fa-video"></i>
     <span>Stop Video</span>
     `
+    
     document.querySelector(".main__video__button").innerHTML=html;
 }
 const setPlayVideo=()=>{
@@ -152,5 +166,7 @@ const setPlayVideo=()=>{
     <i class="play fas fa-video-slash"></i>
     <span>Play Video</span>
     `
+    // div.appendChild(avDiv);
+    
     document.querySelector(".main__video__button").innerHTML=html;
 }

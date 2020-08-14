@@ -12,9 +12,27 @@ video{
     height: 250px;
     width:350px ;
     object-fit: cover;
-    border: 1px solid rgb(148, 148, 44);
-    margin: 4px;
-   
+    /* margin: 4px; */
+    
+}
+.video__element{
+    height: 281px;
+    width: 357px;
+    overflow-wrap: break-word;
+    border: 3px solid rgb(148, 148, 44);
+
+
+}
+#avtar{
+    /* height: ; */
+    z-index: 3;
+    text-align: center;
+    
+
+}
+#avtar >span{
+    padding-left: 2px;
+    color: green;
 }
 video i*{
     /* color: white; */
