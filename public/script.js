@@ -4,9 +4,6 @@
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid');
 const myVideo = document.createElement('video');
-const div =document.createElement('div');
-div.classList.add("video__element");
-console.log(div)
 myVideo.muted = true;
 
 var peer = new Peer(undefined, {
@@ -70,6 +67,8 @@ const connectToNewUser = (useId, stream) => {//this is the others user joined ou
 }
 
 const addVideostream = (video, stream) => {
+    const div =document.createElement('div');
+    div.classList.add("video__element");
     video.srcObject = stream;
     div.appendChild(video);
     video.addEventListener('loadedmetadata', () => {
@@ -142,7 +141,7 @@ const playStop=()=>{
     if(enabled){
         myVideoStream.getVideoTracks()[0].enabled=false;
         setPlayVideo();
-        div.appendChild(avDiv);
+        document.querySelector('.video__element').appendChild(avDiv);
     }
     
     else{
