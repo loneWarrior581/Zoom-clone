@@ -18,4 +18,4 @@
 * Showing the avtar if the person mutes his video for the better user interface
 * Adding responsivness
 
-### _Deployment_ : https://we-video.herokuapp.com/155921db-2786-4a10-9641-df77e52faa5b 
+### _Deployment_ : https://we-video.herokuapp.com/ 
