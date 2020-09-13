@@ -12,7 +12,7 @@
     ![](scr_shots/control_block.PNG)
 
 #### Some of the suggested features are:
-* Verification using the passport authentication ~~google OAuth2.0 ~~ 
+* Verification using the passport authentication ~~google OAuth2.0~~
 * Using the sessions and storing the information in the database. 
 * Adding some of the features to the main controls 
 * Showing the avtar if the person mutes his video for the better user interface
