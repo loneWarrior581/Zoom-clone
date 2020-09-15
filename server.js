@@ -1,6 +1,7 @@
 const express=require('express');
 const app=express();
 const server=require('http') .Server(app);
+// const indexRouter=require("./routes/indexRouter");
 const io=require("socket.io")(server)  // for making rooms 
 const { v4:uuidv4}=require('uuid'); //for creating the the random room id
 const {ExpressPeerServer}=require('peer');
@@ -10,9 +11,14 @@ const peerServer=ExpressPeerServer(server,{
 app.use(express.static('public'));
 app.set('view engine','pug')
 app.use('/peerjs',peerServer);
+// app.use("/",indexRouter);
+
+app.get("/",(req,res)=>{
+    res.render("index");
+})
 
 
-app.get('/',(req,res)=>{
+app.get('/main',(req,res)=>{
     res.redirect(`/${uuidv4()}`);
 })
 
