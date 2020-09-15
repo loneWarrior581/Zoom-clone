@@ -51,7 +51,7 @@ navigator.mediaDevices.getUserMedia({
 
 })
 
-peer.on('open', id => {//opening this connection for the clienst to join and assigning them with the id 
+peer.on('open', id => {//opening this connection for the client to join and assigning them with the id 
     socket.emit('join-room', ROOM_ID, id);
 })
 
