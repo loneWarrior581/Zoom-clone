@@ -9,7 +9,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',  //the host on which we hosted our website will get this through the herroku 
-    port: '443'
+    port: '443'//for deployment 443
 });
 
 let myVideoStream;
