@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "devstart":"nodemon server.js"
+    "devstart": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mongoose": "^5.10.5",
     "peer": "^0.5.3",
     "pug": "^3.0.0",
     "socket.io": "^2.3.0",

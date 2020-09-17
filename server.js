@@ -1,4 +1,5 @@
 const express=require('express');
+const mongoose=require('mongoose');
 const app=express();
 const server=require('http') .Server(app);
 const indexRouter=require("./routes/indexRouter");
@@ -13,18 +14,7 @@ app.set('view engine','pug')
 app.use('/peerjs',peerServer);
 app.use("/",indexRouter);
 
-// app.get("/",(req,res)=>{
-//     res.render("index");
-// })
-
-
-// app.get('/main',(req,res)=>{
-//     res.redirect(`/${uuidv4()}`);
-// })
-
-// app.get('/:room',(req,res)=>{
-//     res.render('room',{roomId:req.params.room})
-// })
+// addind a mongoose connection
 
 io.on('connection',socket=>{
     socket.on('join-room',(roomId,userId)=>{   //this one listnes for the client and if any one joins the room a message is printerd in the console using the the socket.emit('join-room') on the client side
