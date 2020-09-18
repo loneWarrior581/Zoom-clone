@@ -5,17 +5,26 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Connect2U
+        link(rel="stylesheet", href="landing.css")
+        
     body 
-        h1 Welcome to the Connect2U
-        div(class="header")   
-            h1 This is header
-        div(class="makeRoom")
-            h3 Generate Room
-            form(action="/main", method="get")
-                input(type="submit" placeholder="Generate Room Id") 
-        div(class="joinRoom")
-            h3 Join Room
-            form(action="/main", method="get")
-                input(type="text" placeholder="Enter the room id here" )
-                input(type="submit" placeholder="Join Room ") 
-        h3 PS :pls share the url for joining the room 
+        nav
+            div(class="navbar")
+                a(href="#") Home
+                a(href="#") About Us
+                a(href="#") Ping
+            
+        
+        div(class="login-box")
+            h2 Join Room
+            form(action="/main",method="get")
+                div(class="user-box")
+                    input(type="text" name="")
+                    label Username
+                
+                div(class="user-box")
+                    input(type="text" name="" required="true")
+                    label Room Id
+                a(href="")  
+                    input(type="submit", value="Join") 
+                
