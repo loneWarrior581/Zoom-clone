@@ -25,14 +25,13 @@ nav a{
 }
 
 nav a:hover{
-   /* background-color: #ddd;*/
     color: #0a4488;
     cursor: pointer;
    font-weight: bold;
    transition: all;
    transition-delay: .2s;
    transition-duration: .4s;
-   /* transition-property: ease-in-out; */
+ 
     
 }
 
@@ -148,13 +147,8 @@ html {
                 0 0 50px #0a8cd8,
                 0 0 100px #0681e6;
   }
-  
-  /* .login-box a span {
-    position: absolute;
-    display: block;
-  } */
-  
-  .login-box a span:nth-child(1) {
+ 
+ /* .login-box a span:nth-child(1) {
     top: 0;
     left: -100%;
     width: 100%;
@@ -227,4 +221,4 @@ html {
     50%,100% {
       bottom: 100%;
     }
-  }
+  } */
