@@ -5,26 +5,35 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Connect2U
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous")
         link(rel="stylesheet", href="landing.css")
         
-    body 
-        nav
-            div(class="navbar")
-                a(href="#") Home
-                a(href="#") About Us
-                a(href="#") Ping
-            
-        
-        div(class="login-box")
-            h2 Join Room
-            form(action="/main",method="get")
-                div(class="user-box")
-                    input(type="text" name="")
-                    label Username
+    body
+        div(class="wrapper") 
+            nav
+                div(class="navbar")
+                    a(href="#") Home
+                    a(href="#") About Us
+                    a(href="#") Ping
                 
-                div(class="user-box")
-                    input(type="text" name="" required="true")
-                    label Room Id
-                a(href="")  
-                    input(type="submit", value="Join") 
+            
+            div(class="login-box")
+                h2 Join Room
+                form(action="/main",method="get")
+                    div(class="user-box")
+                        input(type="text" name="")
+                        label Username
+                    
+                    div(class="user-box")
+                        input(type="text" name="" required="true")
+                        label Room Id
+                    a(href="")  
+                        input(type="submit", value="Join") 
+         
+        div(id="footer")
+            //- h1 Made with 
+            //- i(data-v-4024b029="" aria-hidden="true" class="fa fa-heart" style="color: rgb(227, 29, 59);") 
+            //- h1 by Uttkarsh
+            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320")
+                path(fill="#0099ff" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,245.3C384,256,480,224,576,186.7C672,149,768,107,864,117.3C960,128,1056,192,1152,186.7C1248,181,1344,107,1392,69.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z")
                 

@@ -1,4 +1,16 @@
-
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  background: linear-gradient( #243b55, rgba(7,97,138,1) 0%);
+}
+.wrapper{
+  margin-bottom: -50px;
+}
 
 nav
 {
@@ -22,10 +34,11 @@ nav a{
     margin-right: 10px;
     border-radius: 2px;
     font-weight: bold;
+    text-shadow: 2px 1px 5px rgba(0,0,0,.6) ;
 }
 
 nav a:hover{
-    color: #0a4488;
+    color: rgb(109, 198, 240) ;
     cursor: pointer;
    font-weight: bold;
    transition: all;
@@ -57,15 +70,8 @@ nav::before {
 }
 
 /* --------------------------------------form---------------------------------  */
-html {
-    height: 100%;
-  }
-  body {
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-    background: linear-gradient( #243b55, rgba(7,97,138,1) 0%);
-  }
+
+  
   
   .login-box {
     position: absolute;
@@ -147,6 +153,17 @@ html {
                 0 0 50px #0a8cd8,
                 0 0 100px #0681e6;
   }
+
+  #footer {
+    position:absolute;
+    /* margin-top: -50px; */
+    
+    bottom:0;
+    width:100%;
+    z-index: -3;
+    /* height:60px;   Height of the footer */
+    /* background:#6cf; */
+ }
  
  /* .login-box a span:nth-child(1) {
     top: 0;
