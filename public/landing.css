@@ -156,13 +156,9 @@ nav::before {
 
   #footer {
     position:absolute;
-    /* margin-top: -50px; */
-    
     bottom:0;
     width:100%;
     z-index: -3;
-    /* height:60px;   Height of the footer */
-    /* background:#6cf; */
  }
  
  /* .login-box a span:nth-child(1) {
