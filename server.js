@@ -12,6 +12,23 @@ const peerServer=ExpressPeerServer(server,{
 app.use(express.static('public'));
 app.set('view engine','pug')
 app.use('/peerjs',peerServer);
+
+mongoose.connect(process.env.MONGOURI,
+    {
+        dbName:"users",//giving the database name 
+        user:process.env.USER,
+        pass:process.env.PASS,
+        useNewUrlParser:true,
+        useUnifiedTopology:true,
+        useFindAndModify:false
+    })
+    .then(()=>{
+        console.log("Mongodb connected...");
+    })
+    .catch(()=>{
+        console.log("Connection failed...")
+    });
+
 app.use("/",indexRouter);
 
 // addind a mongoose connection
