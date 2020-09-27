@@ -16,19 +16,31 @@ html(lang="en")
                     a(href="#") About Us
                     a(href="#") Ping
                 
-            
-            div(class="login-box")
-                h2 Join Room
-                form(action="/main",method="get")
-                    div(class="user-box")
-                        input(type="text" name="")
-                        label Username
-                    
-                    div(class="user-box")
-                        input(type="text" name="" required="true")
-                        label Room Id
-                    a(href="")  
-                        input(type="submit", value="Join") 
+            div(class="container")
+                div(class="login-box class1")
+                    h2 Create Room
+                    form(action="/main",method="get")
+                        div(class="user-box")
+                            input(type="text" name="")
+                            label Username
+                        
+                        div(class="user-box")
+                            input(type="text" name="" required="true")
+                            label Room Id
+                        a(href="")  
+                            input(type="submit", value="Create") 
+                div(class="login-box class2")
+                    h2 Join Room
+                    form(action="/main",method="get")
+                        div(class="user-box")
+                            input(type="text" name="")
+                            label Username
+                        
+                        div(class="user-box")
+                            input(type="text" name="" required="true")
+                            label Room Id
+                        a(href="")  
+                            input(type="submit", value="Join") 
          
         div(id="footer")
             //- h1 Made with 
